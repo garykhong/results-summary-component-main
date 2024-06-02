@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      font-family: 'Hanken Grotesk', 'sans-serif';
+      margin: 0;
+    }
+
+    .container {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 600px;
+      border-radius: 8px;
+      margin-top: -20px;
+    }
+
+    .yourResultContainer {
+      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      color: white;
+      border-radius: 0 0 40px 40px;
+      padding: 1rem 3rem;
+    }
+
+    .score {
+      font-size: 56px;
+      margin-block-end: 0;
+      margin-block-start: 2rem;
+    }
+
+    .totalPoints {
+      font-size: 18px;
+      margin-block-start: 0;
+    }
+
+    .result {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .firstResult {
+      border-radius: 50%;
+      padding: 0 3rem;
+      background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    }
+
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .reactionText {
+      color: hsl(0, 100%, 67%);
+      background-color: #fff6f5;
+    }
+
+    .memoryText {
+      color: hsl(39, 100%, 56%);
+      background-color: hsla(39, 100%, 56%, 0.05);
+    }
+
+    .verbalText {
+      color: hsl(166, 100%, 37%);
+      background-color: hsla(166, 100%, 37%, 0.05);
+    }
+
+    .visualText {
+      color: hsl(234, 85%, 45%);
+      background-color: hsla(234, 85%, 45%, 0.05);
+    }
+
+    .boldedText {
+      font-weight: 600;
+    }
+
+    .lightLavenderText {
+      color: hsl(241, 100%, 89%)
+    }
+
+    .paleBlueText {
+      color: hsl(221, 100%, 96%)
+    }
+
+    .greyText {
+      color: #a099a0;
+    }
+
+    .continueLink {
+      background-color: hsl(224, 30%, 27%);
+      border-radius: 50px;
+      padding: 1rem 0;
+      cursor: pointer;
+      font-weight: 600;
+      color: hsl(0, 0%, 100%);
+      margin-top: 1rem;
+    }
+
+    .continueLink:hover {
+      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));      
+    }
+
+    .summaryContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 0rem 1rem 1rem 1rem;
+    }
+
+    .categoryContainer {
+      display: flex;
+      justify-content: space-between;      
+      padding: 1rem 1rem;
+      border-radius: 10px;
+    }
+
+    .category {
+      display: flex;
+      gap: 10px;
+    }
+
+    .summary {
+      text-align: left;
+    }
+
+    .blackText {
+      color: black;
+    }
+
+    @media screen and (min-width: 1440px) {
+      .container {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0;
+      }
+
+      .summaryContainer {
+        width: 100%;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .yourResultContainer {
+        border-radius: 40px;
+      }
+
+      .result {
+        margin: 3rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="yourResultContainer">
+      <h3 class="lightLavenderText">
+        Your Result
+      </h3>
+      <div class="result">
+        <div class="firstResult">
+          <h2 class="score">76</h2>
+          <h5 class="totalPoints lightLavenderText">of 100</h5>
+        </div>
+      </div>
+      <h2>Great</h3>
+        <p class="lightLavenderText boldedText">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <div class="summaryContainer">
+      <h3 class="summary">Summary</h3>
+      <div class="categoryContainer reactionText">
+        <div class="category">
+          <img src="./assets/images/icon-reaction.svg" />
+          <span class="boldedText">Reaction</span>
+        </div>
+
+        <span><span class="boldedText blackText">80</span> <span class="boldedText greyText">/ 100</span></span>
+      </div>
+      <div class="categoryContainer memoryText">
+        <div class="category">
+          <img src="./assets/images/icon-memory.svg" />
+          <span class="boldedText">Memory</span>
+        </div>
+        <span><span class="boldedText blackText">92</span> <span class="boldedText greyText">/ 100</span></span>
+      </div>
+      <div class="categoryContainer verbalText">
+        <div class="category">
+          <img src="./assets/images/icon-verbal.svg" />
+          <span class="boldedText">Verbal</span>
+        </div>
+        <span><span class="boldedText blackText">61</span> <span class="boldedText greyText">/ 100</span></span>
+      </div>
+      <div class="categoryContainer visualText">
+        <div class="category">
+          <img src="./assets/images/icon-visual.svg" />
+          <span class="boldedText">Visual</span>
+        </div>
+        <span><span class="boldedText blackText">72</span> <span class="boldedText greyText">/ 100</span></span>
+      </div>
+      <div class="continueLink">
+        Continue
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Gary Khong</a>.
+  </div>
+</body>
+
+</html>
